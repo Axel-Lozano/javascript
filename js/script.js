@@ -6,7 +6,7 @@ while (entrada != "ESC"){
     alert("Ingresaste "+ entrada);
     entrada = prompt ("Ingrese otro dato, para salir ingrese ESC: ")
 }
-*/
+
 
 
 //Desafio 1 primera opcion
@@ -52,17 +52,77 @@ function total(){
 
 total()
 
+*/
+
 //desafio 1 opcion 3
+let costo = parseFloat(prompt("Ingrese el costo del producto: "));
+let cuotas = parseInt(prompt("Ingrese las cuotas (3 10% interes, 6 20% interes, 9 30% interes o 12 40% interes)"));
 
-function calculo(){
-    let costo = parseFloat(prompt("Ingrese el costo a pagar"))
-    let cuotas = parseInt(prompt("Ingrese las cuotas"))
+function cuotasTres(){
+    let interes = costo * 10 / 100;
 
-    let precioCuota = costo / cuotas
+    let total = costo + interes;
 
-    alert("El precio por cuota es: $" + precioCuota)
+    let numCuotas = total / 3;
+
+    alert("El total a pagar con el interes es:  $" + total  + " | El monto por cuota es:$" + numCuotas);
+    
 }
 
-calculo()
+function cuotasSeis(){
+    let interes = costo * 20 / 100;
+
+    let total = costo + interes;
+
+    let numCuotas = total / 6;
+
+    alert("El total a pagar con el interes es:  $" + total + " | El monto por cuota es:$" + numCuotas);
+    
+}
+
+function cuotasNueve(){
+    let interes = costo * 30 / 100;
+
+    let total = costo + interes;
+
+    let numCuotas = total / 9;
+
+    alert("El total a pagar con el interes es:  $" + total + " | El monto por cuota es:$" + numCuotas);
+    
+}
+
+function cuotasDoce(){
+    let interes = costo * 40 / 100;
+
+    let total = costo + interes;
+
+    let numCuotas = total / 12;
+
+    alert("El total a pagar con el interes es:  $" + total + " | El monto por cuota es:$" + numCuotas);
+    
+}
+
+switch (cuotas) {
+    case 3:
+        cuotasTres();
+        break;
+
+    case 6:
+        cuotasSeis();
+        break;
+
+    case 9:
+        cuotasNueve()
+        break;
+
+    case 12:
+        cuotasDoce()
+        break;
+
+    default:
+        alert("Operacion invalida");
+
+        break;
+}
 
 
