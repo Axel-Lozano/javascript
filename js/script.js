@@ -56,7 +56,8 @@ total()
 
 //desafio 1 opcion 3  
 //agregue el desafio complementario 2
-let entrada = prompt("Desea realizar una operacion? (si) o (no)")
+let entrada = prompt("Desea realizar una operacion? (si) o (no)");
+const clientes = [];
 
 while (entrada !== "no") {
 
@@ -64,7 +65,6 @@ while (entrada !== "no") {
         let nombre = prompt("Ingrese su nombre:");
         let costo = parseFloat(prompt("Ingrese el costo del producto: "));
         let cuotas = parseInt(prompt("Ingrese las cuotas (3 10% interes, 6 20% interes, 9 30% interes o 12 40% interes)"));
-        const clientes = []
 
         clientes.push(nombre)
         console.log(clientes)
