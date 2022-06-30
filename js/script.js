@@ -54,75 +54,90 @@ total()
 
 */
 
-//desafio 1 opcion 3
-let costo = parseFloat(prompt("Ingrese el costo del producto: "));
-let cuotas = parseInt(prompt("Ingrese las cuotas (3 10% interes, 6 20% interes, 9 30% interes o 12 40% interes)"));
+//desafio 1 opcion 3  
+//agregue el desafio complementario 2
+let entrada = prompt("Desea realizar una operacion? (si) o (no)")
 
-function cuotasTres(){
-    let interes = costo * 10 / 100;
+while (entrada !== "no") {
 
-    let total = costo + interes;
+    if (entrada == "si") {
+        let nombre = prompt("Ingrese su nombre:");
+        let costo = parseFloat(prompt("Ingrese el costo del producto: "));
+        let cuotas = parseInt(prompt("Ingrese las cuotas (3 10% interes, 6 20% interes, 9 30% interes o 12 40% interes)"));
+        const clientes = []
 
-    let numCuotas = total / 3;
+        clientes.push(nombre)
+        console.log(clientes)
 
-    alert("El total a pagar con el interes es:  $" + total  + " | El monto por cuota es:$" + numCuotas);
-    
+        function cuotasTres() {
+            let interes = costo * 10 / 100;
+
+            let total = costo + interes;
+
+            let numCuotas = total / 3;
+
+            alert("El total a pagar con el interes es:  $" + total + " | El monto por cuota es:$" + numCuotas);
+
+        }
+
+        function cuotasSeis() {
+            let interes = costo * 20 / 100;
+
+            let total = costo + interes;
+
+            let numCuotas = total / 6;
+
+            alert("El total a pagar con el interes es:  $" + total + " | El monto por cuota es:$" + numCuotas);
+
+        }
+
+        function cuotasNueve() {
+            let interes = costo * 30 / 100;
+
+            let total = costo + interes;
+
+            let numCuotas = total / 9;
+
+            alert("El total a pagar con el interes es:  $" + total + " | El monto por cuota es:$" + numCuotas);
+
+        }
+
+        function cuotasDoce() {
+            let interes = costo * 40 / 100;
+
+            let total = costo + interes;
+
+            let numCuotas = total / 12;
+
+            alert("El total a pagar con el interes es:  $" + total + " | El monto por cuota es:$" + numCuotas);
+
+        }
+
+        switch (cuotas) {
+            case 3:
+                cuotasTres();
+                break;
+
+            case 6:
+                cuotasSeis();
+                break;
+
+            case 9:
+                cuotasNueve()
+                break;
+
+            case 12:
+                cuotasDoce()
+                break;
+
+            default:
+                alert("Operacion invalida");
+
+                break;
+        }
+    }else{
+        alert("Operacion invalida")
+    }
+
+    entrada = prompt("Desea realizar otra operacion? (si) o (no)")
 }
-
-function cuotasSeis(){
-    let interes = costo * 20 / 100;
-
-    let total = costo + interes;
-
-    let numCuotas = total / 6;
-
-    alert("El total a pagar con el interes es:  $" + total + " | El monto por cuota es:$" + numCuotas);
-    
-}
-
-function cuotasNueve(){
-    let interes = costo * 30 / 100;
-
-    let total = costo + interes;
-
-    let numCuotas = total / 9;
-
-    alert("El total a pagar con el interes es:  $" + total + " | El monto por cuota es:$" + numCuotas);
-    
-}
-
-function cuotasDoce(){
-    let interes = costo * 40 / 100;
-
-    let total = costo + interes;
-
-    let numCuotas = total / 12;
-
-    alert("El total a pagar con el interes es:  $" + total + " | El monto por cuota es:$" + numCuotas);
-    
-}
-
-switch (cuotas) {
-    case 3:
-        cuotasTres();
-        break;
-
-    case 6:
-        cuotasSeis();
-        break;
-
-    case 9:
-        cuotasNueve()
-        break;
-
-    case 12:
-        cuotasDoce()
-        break;
-
-    default:
-        alert("Operacion invalida");
-
-        break;
-}
-
-
