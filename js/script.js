@@ -54,10 +54,12 @@ total()
 
 */
 
+
 //desafio 1 opcion 3  
 //agregue el desafio complementario 2
 let entrada = prompt("Desea realizar una operacion? (si) o (no)");
 const clientes = [];
+
 
 while (entrada !== "no") {
 
@@ -66,7 +68,17 @@ while (entrada !== "no") {
         let costo = parseFloat(prompt("Ingrese el costo del producto: "));
         let cuotas = parseInt(prompt("Ingrese las cuotas (3 10% interes, 6 20% interes, 9 30% interes o 12 40% interes)"));
 
-        clientes.push(nombre)
+        class operciones {
+            constructor(nombre, cuotas, costo) {
+                this.nombre = nombre;
+                this.cuotas = cuotas;
+                this.costo = costo;
+            }
+        }
+
+        let cliente = new operciones (nombre, cuotas, costo);
+
+        clientes.push(cliente)
         console.log(clientes)
 
         function cuotasTres() {
@@ -141,3 +153,4 @@ while (entrada !== "no") {
 
     entrada = prompt("Desea realizar otra operacion? (si) o (no)")
 }
+
