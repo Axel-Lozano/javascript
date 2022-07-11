@@ -79,7 +79,6 @@ while (entrada !== "no") {
         let cliente = new operciones (nombre, cuotas, costo);
 
         clientes.push(cliente)
-        console.log(clientes)
 
         function cuotasTres() {
             let interes = costo * 10 / 100;
@@ -153,4 +152,10 @@ while (entrada !== "no") {
 
     entrada = prompt("Desea realizar otra operacion? (si) o (no)")
 }
+
+clientes.forEach((mostrar) => {
+    console.log(mostrar)
+})
+
+
 
